@@ -27,3 +27,21 @@ function sumZero(arr){
         }
     }
 }
+
+
+
+
+
+
+//this is my way of answering using the frequency counter pattern
+
+function countUnique(arr) {
+    let newObj = {}
+    for (let val of arr) {
+        newObj[val] = [newObj[val] || 0] +1
+    }
+    return Object.keys(newObj).length
+}
+
+countUnique([1,1,1,1,1,2])
+countUnique([1,2,3,4,4,4,7,7,12,12,13])
