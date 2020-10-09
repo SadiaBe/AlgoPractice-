@@ -45,3 +45,36 @@ function countUnique(arr) {
 
 countUnique([1,1,1,1,1,2])
 countUnique([1,2,3,4,4,4,7,7,12,12,13])
+
+
+// trying to solve using multiple pointers 
+// function countUniqueValues(arr ){
+//     let left = 0
+//     let right = left + 1
+//     for (let val of arr)
+//     if (arr[left] === arr[right]) {
+//         right +=1 
+//     }
+//     else if(){
+        
+//     }
+//     else {
+//         return "hi"
+//     }
+// }
+//   // add whatever parameters you deem necessary - good luck!
+// }
+
+//this is how he solved it:
+// function countUniqueValues(arr){
+//     if(arr.length === 0) return 0;
+//     var i = 0;
+//     for(var j = 1; j < arr.length; j++){
+//         if(arr[i] !== arr[j]){
+//             i++;
+//             arr[i] = arr[j]
+//         }
+//     }
+//     return i + 1;
+// }
+// countUniqueValues([1,2,2,5,7,7,99])
