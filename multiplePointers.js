@@ -38,7 +38,7 @@ function sumZero(arr){
 function countUnique(arr) {
     let newObj = {}
     for (let val of arr) {
-        newObj[val] = [newObj[val] || 0] +1
+        newObj[val] = (newObj[val] || 0) + 1
     }
     return Object.keys(newObj).length
 }
