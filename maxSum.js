@@ -1,13 +1,8 @@
 
 //this is my atempt 
-
-
-
-
-
-
-
-
+function maxSubarraySum(arr, num){
+    
+}
 
 
 

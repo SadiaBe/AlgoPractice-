@@ -71,3 +71,27 @@ function validAnagram(str1,str2){
 //     }
 //     return true
 //     }
+
+// From leetCode: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+// You may assume that each input would have exactly one solution, and you may not use the same element twice.
+// You can return the answer in any order.
+
+//this is my solution with a quadratic big O but it works 
+
+function twoSum(nums, target) {
+    let newNums = nums.sort((a, b) => a - b)
+
+    for (let i = 0; i < newNums.length; i++) {
+        for (let j = i + 1; j < newNums.length; j++){
+            if (newNums[i] + newNums[j] === target) {
+                return [newNums[i], newNums[j]]
+                // pr return [i,j] since that's whagt theyre asking for!!
+            }
+        } 
+    }
+};
+twoSum([2,7,11,15], 9)
+twoSum([3,2,4], 6)
+
+//can have a better solution of the array we get is sorted. maybe first sort the array then do the work? 
+
