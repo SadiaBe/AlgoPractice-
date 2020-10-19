@@ -77,6 +77,8 @@ function validAnagram(str1,str2){
 // You can return the answer in any order.
 
 //this is my solution with a quadratic big O but it works 
+// numArray.sort((a, b) => a - b); // For ascending sort
+// numArray.sort((a, b) => b - a); // For descending sort
 
 function twoSum(nums, target) {
     let newNums = nums.sort((a, b) => a - b)

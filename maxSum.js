@@ -1,7 +1,26 @@
+// Write a function called maxSubarraySum which accepts an array of integers and a number called n. The function should calculate the maximum sum of n consecutive elements in the array.
 
 //this is my atempt 
 function maxSubarraySum(arr, num){
-    
+    //make two variables that will hold the values you'll need to compare in order to get the max sum:
+    let maxSum = 0
+    let tempSum = 0
+    //take care of edge case:
+    if (num > arr.length){
+        return null;
+    }
+    tempSum = maxSum;
+    // create the first sum by using a loop and adding together n number of digits:
+    for (let i = 0; i < num; i++){
+        tempSum += arr[i]
+    }
+    // create another loop that will go through the array and i will be the index of the next number to be added which is also n. so you subtract the first number and then add the number in the end to create a sliding window. this will keep lopping for every number after the number with index = n. then it will compare the max and temp sum and return rhe greater 
+    for (let i = num; i < arr.length; i++) {
+        tempSum = tempSum - arr[i - num] + arr[i];
+        maxSum = Math.max(maxSum, tempSum);
+      }
+      return maxSum;
+
 }
 
 
