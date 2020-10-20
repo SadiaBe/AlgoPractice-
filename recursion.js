@@ -33,7 +33,8 @@ function sumRange(num){
  }
 
 
-//  Writing Factorial Iteratively vs Recursively 
+
+ //  Writing Factorial Iteratively vs Recursively 
 
 //iterative because it iterates through 
 function factorial(num){
@@ -53,8 +54,35 @@ function factorial(num){
 
 
 
+// HELPER METHOD RECURSION:
 
- 
+function outer(input){
+    var outerScopedVariable = []
+    function helper(helperInput){
+        // modify the outerScopedVariable
+        helper(helperInput--)
+    }
+    helper(input)
+    return outerScopedVariable;
+}
+
+
+// Trying to collect all of the odd values in an array using a helper recursive method:
+
+function collectOddValues(arr){
+    let result = []
+    function helper(helperInput){
+        if(helperInput.length === 0) {
+            return;
+        }
+        if(helperInput[0] % 2 !== 0){
+            result.push(helperInput[0])
+        }
+        helper(helperInput.slice(1))
+    }
+    helper(arr)
+    return result;
+}
 
 
 
