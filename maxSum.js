@@ -26,12 +26,6 @@ function maxSubarraySum(arr, num){
 
 
 
-
-
-
-
-
-
 //this is the long way with large big 0 
 
 function maxSubarraySum(arr, num) {
