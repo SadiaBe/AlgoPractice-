@@ -1,3 +1,6 @@
+//write a function called binarySearch which accepts a sorted array and value and returns the index at which the value exists, other wise return -1
+
+
 // Original Solution
 function binarySearch(arr, elem) {
     var start = 0;
